@@ -1,0 +1,105 @@
+@import "~bootstrap/scss/bootstrap";
+
+#root {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    width: 100%;
+    max-width: none;
+}
+.login-bg {
+  background: url("@/assets/library.png");
+  background-repeat:   no-repeat;
+  background-position: center center;
+  height: 100vh;
+}
+form {
+    text-align: left;
+}
+.card.login {
+  background-color: $gray-200;
+}
+.card {
+  padding: 0;
+  text-align: left;
+}
+.was-validated .form-control:invalid, .form-control.is-invalid:focus {
+  border-color: $red-400;
+}
+.invalid-feedback {
+  display: block;
+  height: 21px;
+  color: $red-400;
+}
+.libra-logo {
+  object-fit: contain;
+}
+
+section {
+  position: relative;
+  top: 86px;
+}
+.font-1rem {
+  font-size: 1rem;
+}
+.font-12 {
+  font-size: 12px;
+}
+.separator {
+  border-bottom: solid 1px $gray-200;
+}
+
+.overlay-text {
+  color: #0d6efd;
+  font-weight: bold;
+}
+
+.max-height-150 {
+  max-height: 150px;
+}
+.bg-gray-800 {
+  background-color: $gray-800;
+}
+.bg-gray-300 {
+  background-color: $gray-300;
+}
+.bg-gray-100 {
+  background-color: $gray-100;
+}
+.h-36 {
+  height: 36px;
+}
+.view-details-btn {
+  padding-right: 3rem;
+  padding-left: 0;
+}
+.update-btn {
+  margin-right: 0.5rem;
+}
+.add-book {
+  transform-origin: 0 0;
+  transition: transform .25s, visibility .25s ease-in;
+}
+.add-book:hover {
+  cursor: pointer;
+  background-color: $gray-600;
+  & .text-primary {
+    color: $white !important;
+    transform: scale(1.125);
+  }
+  & img {
+    transform: scale(1.5);
+  }
+}
+.loader{
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 99999;
+  background-color: $gray-200;
+  opacity: .75;
+}
