@@ -1,4 +1,4 @@
-#Libra Integrated Library System
+##Libra Integrated Library System
 
 A simple book management application that uses [React] + [Vite ⚡] + [RTK Query] + [Firebase (Authentication, Storage and Firestore)]
 I also used: 
