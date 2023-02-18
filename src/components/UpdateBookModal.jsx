@@ -56,11 +56,10 @@ export default function UpdateBookModal ({ receivedBook }) {
       },
       () => {
         getDownloadURL(uploadTask.snapshot.ref).then((downloadURL) => {
-          console.log("Successfully uploaded image. Inserting to db now...");
           book.imageUrl = downloadURL;
-          updateBook(receivedBook.id, book).then(() => {
-            formik.setFieldValue("imgFile", downloadURL);
-            toast.success("Updating book successful!", {
+          console.log("Successfully uploaded image. Inserting to db now... ", book);
+          updateBook(book).then(() => {
+            toast.success("Book update successful!", {
               position: "top-center",
               autoClose: 3000,
               hideProgressBar: false,

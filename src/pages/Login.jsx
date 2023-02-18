@@ -30,7 +30,6 @@ export default function Login () {
     initialValues: { email: "", password: "" },
     validationSchema: loginSchema,
     onSubmit: (values, actions) => {
-      alert(JSON.stringify(values, null, 2));
       setFormState(values);
       signInWithEmailAndPassword(auth, values.email, values.password).then((authUser) => {
         dispatch(login({
