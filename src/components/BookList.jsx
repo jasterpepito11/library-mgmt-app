@@ -3,10 +3,10 @@ import React from "react";
 import { Card, Col, Row, Button } from "react-bootstrap";
 import { useNavigate } from "react-router-dom";
 import { useFetchBooksListQuery } from "../redux/services/api";
-import { RiEditLine } from "react-icons/ri/";
 import addNewImg from "../assets/add_new_vector.png";
 import DeleteBookModal from "./DeleteBookModal";
 import Loader from "./Loader";
+import UpdateBookModal from "./UpdateBookModal";
 
 export default function BookList () {
   const { data, isLoading } = useFetchBooksListQuery();
@@ -49,7 +49,7 @@ export default function BookList () {
                   {book.dateCreated}
                 </Card.Text>
                 <Button className="view-details-btn" variant="link">View book details</Button>
-                <Button className="update-btn" variant="primary" ><RiEditLine /></Button>
+                <UpdateBookModal receivedBook={book}/>
                 <DeleteBookModal bookId={book.id} bookName={book.name} />
               </Card.Body>
             </Col>

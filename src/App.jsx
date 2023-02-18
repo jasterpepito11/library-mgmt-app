@@ -8,7 +8,6 @@ import HomeLayout from "./pages/HomeLayout";
 import ErrorPage from "./pages/ErrorPage";
 import BookList from "./components/BookList";
 import AddBook from "./components/AddBook";
-import UpdateBook from "./components/UpdateBook";
 import BookDetails from "./components/BookDetails";
 import AuthProvider from "./context/AuthProvider";
 
@@ -29,7 +28,6 @@ function App () {
                   <Route index element={<BookList />} />
                   <Route path="new" element={<AddBook />} />
                   <Route path=":bookId" element={<BookDetails />} />
-                  <Route path=":bookId/edit" element={<UpdateBook />} />
                 </Route>
                 <Route path="*" element={<ErrorPage />} />
               </Route>

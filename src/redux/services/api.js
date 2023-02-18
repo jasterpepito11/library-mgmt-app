@@ -44,9 +44,9 @@ export const bookApi = createApi({
       invalidatesTags: ["Books"]
     }),
     updateBook: builder.mutation({
-      async queryFn (id, book) {
+      async queryFn (book) {
         try {
-          await updateDoc(doc(db, "books", id), book);
+          await updateDoc(doc(db, "books", book.id), { ...book });
           return { data: "ok" };
         } catch (e) {
           return { error: e };
